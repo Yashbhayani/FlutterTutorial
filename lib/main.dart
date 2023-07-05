@@ -36,25 +36,13 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Center(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-              TextButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              ),
-              ElevatedButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              ),
-              OutlinedButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              )
-            ])));
+        body: Container(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/pexels-pixabay-33045.jpg'),
+            Image.asset('assets/images/pexels-james-wheeler-1519088.jpg'),
+          ],
+        )));
   }
 }
