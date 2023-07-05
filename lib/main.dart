@@ -32,29 +32,142 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var row = Row(
+      children: [
+        Container(
+          margin: const EdgeInsets.only(right: 10),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 175, 238, 104),
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 10),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 187, 22, 0),
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 11),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 255, 183, 0),
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 11),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 0, 236, 149),
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 11),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 0, 238, 242),
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 11),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 0, 38, 254),
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 11),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 200, 0, 250),
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 11),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 255, 0, 191),
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 11),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 255, 0, 0),
+        ),
+        Container(
+          margin: const EdgeInsets.only(right: 11),
+          height: 200,
+          width: 200,
+          color: const Color.fromARGB(255, 0, 0, 0),
+        ),
+      ],
+    );
+    var singleChildScrollView2 = SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: row,
+    );
+    var padding3 = Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: singleChildScrollView2,
+    );
+    var column = Column(
+      children: [
+        padding3,
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: Colors.lightGreen,
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: const Color.fromARGB(255, 187, 22, 0),
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: const Color.fromARGB(255, 255, 183, 0),
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: const Color.fromARGB(255, 0, 236, 149),
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: const Color.fromARGB(255, 0, 238, 242),
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: const Color.fromARGB(255, 0, 38, 254),
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: const Color.fromARGB(255, 200, 0, 250),
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: const Color.fromARGB(255, 255, 0, 191),
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: const Color.fromARGB(255, 255, 0, 0),
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 11),
+          height: 200,
+          color: const Color.fromARGB(255, 0, 0, 0),
+        ),
+      ],
+    );
+    var singleChildScrollView = SingleChildScrollView(child: column);
+    var padding2 = Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: singleChildScrollView,
+    );
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Center(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-              TextButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              ),
-              ElevatedButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              ),
-              OutlinedButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              )
-            ])));
+        body: padding2);
   }
 }
