@@ -1,6 +1,6 @@
 {
-    "name": "tapp1",
-    "short_name": "tapp1",
+    "name": "tapp2button",
+    "short_name": "tapp2button",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

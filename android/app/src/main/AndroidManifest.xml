@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tapp1">
+    package="com.example.tapp2button">
    <application
-        android:label="tapp1"
+        android:label="tapp2button"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
