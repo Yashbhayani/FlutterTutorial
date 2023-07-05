@@ -6,8 +6,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,29 +30,29 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var textStyle = const TextStyle(fontSize: 21, fontWeight: FontWeight.bold);
+    var inkWell = InkWell(
+        onTap: () => {print('On Tap')},
+        onLongPress: () => {print('On LongPress')},
+        onDoubleTap: () => {print('on DoubleTap')},
+        child: Container(
+          width: 200,
+          height: 200,
+          color: const Color.fromRGBO(255, 193, 7, 1),
+          child: Center(
+            child: InkWell(
+              onTap: () => {print('Text Widget Tapped!')},
+              child: Text(
+                'Click here',
+                style: textStyle,
+              ),
+            ),
+          ),
+        ));
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Center(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-              TextButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              ),
-              ElevatedButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              ),
-              OutlinedButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              )
-            ])));
+        body: Center(child: inkWell));
   }
 }
