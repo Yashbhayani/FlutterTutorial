@@ -53,7 +53,21 @@ class _MyHomePageState extends State<MyHomePage> {
             leading: Text('${index + 1}'),
             title: Text(item['name']!),
             subtitle: Text(item['number']!),
-            trailing: Icon(Icons.add),
+            trailing: Container(
+              decoration: const BoxDecoration(
+                color: Colors.blueGrey,
+                shape: BoxShape.circle,
+              ),
+              child: IconButton(
+                icon: const Icon(Icons.add),
+                onPressed: () {
+                  print("$item['name'] $item['number']");
+                },
+                color: Colors.black,
+                hoverColor: Color.fromARGB(255, 242, 255, 0),
+              ),
+            ),
+            // Icon(Icons.add),
           );
         },
         itemCount: k.length,
