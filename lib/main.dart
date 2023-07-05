@@ -30,31 +30,52 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
+      appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Expanded(
+              child: Text(
+                'You have pushed the button this many times:',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            Expanded(
+              child: Text(
+                'You have pushed the button this many times:',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            )
+          ],
         ),
-        body: Center(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-              TextButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              ),
-              ElevatedButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              ),
-              OutlinedButton(
-                child: Text('Click hear'),
-                onPressed: () => {print("Hello Yash")},
-                onLongPress: () => {print("Hello Yash Bhai")},
-              )
-            ])));
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
   }
 }

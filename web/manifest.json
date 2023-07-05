@@ -1,6 +1,6 @@
 {
-    "name": "tapp2button",
-    "short_name": "tapp2button",
+    "name": "firsttutorialproject",
+    "short_name": "firsttutorialproject",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

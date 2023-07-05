@@ -1,4 +1,4 @@
-package com.example.tapp2button
+package com.example.firsttutorialproject
 
 import io.flutter.embedding.android.FlutterActivity
 
