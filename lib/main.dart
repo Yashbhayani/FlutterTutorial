@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // ignore: unnecessary_null_comparison
       if (n1 != null || n2 != null) {
         var div = n1 / n2;
-        Result = 'The Div of $n1  and $n2 is $div';
+        Result = 'The Div of $n1  and $n2 is ${div.toStringAsFixed(2)}';
       }
     });
   }
